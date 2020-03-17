@@ -2,6 +2,11 @@ package io.tarcaye.remote.mob.roman.numerals;
 
 import org.junit.Test;
 
+import java.util.Arrays;
+import java.util.stream.Collectors;
+import java.util.stream.IntStream;
+import java.util.stream.Stream;
+
 import static org.assertj.core.api.Assertions.assertThat;
 
 public class ArabicToRomanMapperTest {
@@ -21,12 +26,6 @@ public class ArabicToRomanMapperTest {
 	}
 
     private String toRoman(int i) {
-		if (i == 3) {
-			return "III";
-		}
-		if (i == 1) {
-			return "I";
-		}
-		return "II";
+		return IntStream.range(0, i).mapToObj(x -> ("I")).collect(Collectors.joining());
 	}
 }
