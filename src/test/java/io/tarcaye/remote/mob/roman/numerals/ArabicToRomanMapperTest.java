@@ -4,14 +4,27 @@ import org.junit.Test;
 
 import static org.assertj.core.api.Assertions.assertThat;
 
-public class ArabicToRomanMapperTest {
-    @Test
-    public void should_return_roman_translation_for_1() {
-        // 1 -> I
-        assertThat(toRoman()).isEqualTo("I");
-    }
+import java.util.function.Predicate;
 
-    private String toRoman() {
-        return "I";
-    }
+public class ArabicToRomanMapperTest {
+	@Test
+	public void should_return_roman_translation_for_1() {
+		assertThat(toRoman()).isEqualTo("I");
+	}
+
+	@Test
+	public void should_return_roman_translation_for_2() {
+		assertThat(toRoman(2)).isEqualTo("II");
+	}
+
+	private String toRoman() {
+		return toRoman(1);
+	}
+
+	private String toRoman(int i) {
+		if (i == 1) {
+			return "I";
+		}
+		return "II";
+	}
 }
