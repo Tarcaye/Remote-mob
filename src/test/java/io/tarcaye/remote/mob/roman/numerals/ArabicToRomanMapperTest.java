@@ -6,12 +6,12 @@ import static org.assertj.core.api.Assertions.assertThat;
 
 public class ArabicToRomanMapperTest {
     @Test
-    public void name() {
+    public void should_return_roman_translation_for_1() {
         // 1 -> I
-        assertThat(getActual()).isEqualTo("I");
+        assertThat(toRoman()).isEqualTo("I");
     }
 
-    private String getActual() {
+    private String toRoman() {
         return "I";
     }
 }
