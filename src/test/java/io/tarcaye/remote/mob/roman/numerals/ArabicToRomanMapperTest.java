@@ -15,7 +15,15 @@ public class ArabicToRomanMapperTest {
 		assertThat(toRoman(2)).isEqualTo("II");
 	}
 
+	@Test
+	public void should_return_roman_translation_for_3() {
+		assertThat(toRoman(3)).isEqualTo("III");
+	}
+
     private String toRoman(int i) {
+		if (i == 3) {
+			return "III";
+		}
 		if (i == 1) {
 			return "I";
 		}
