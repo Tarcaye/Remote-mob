@@ -32,9 +32,17 @@ public class ArabicToRomanMapperTest {
 		assertThat(toRoman(5)).isEqualTo("V");
 	}
 
+	@Test
+	public void should_return_roman_translation_for_4() {
+		assertThat(toRoman(4)).isEqualTo("IV");
+	}
+
     private String toRoman(int i) {
 		if (i == 5) {
 			return "V";
+		}
+		if (i == 4) {
+			return "IV";
 		}
 		return range(0, i).mapToObj(x -> ("I")).collect(joining());
 	}
