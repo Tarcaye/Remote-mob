@@ -7,6 +7,7 @@ import java.util.stream.Collectors;
 import java.util.stream.IntStream;
 import java.util.stream.Stream;
 
+import static java.util.stream.Collectors.joining;
 import static org.assertj.core.api.Assertions.assertThat;
 
 public class ArabicToRomanMapperTest {
@@ -26,6 +27,6 @@ public class ArabicToRomanMapperTest {
 	}
 
     private String toRoman(int i) {
-		return IntStream.range(0, i).mapToObj(x -> ("I")).collect(Collectors.joining());
+		return IntStream.range(0, i).mapToObj(x -> ("I")).collect(joining());
 	}
 }
