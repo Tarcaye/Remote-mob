@@ -41,8 +41,8 @@ public class ArabicToRomanMapperTest {
 		if (i == 5) {
 			return "V";
 		}
-		if (i == 4) {
-			return "IV";
+		if (i == 5 - 1) {
+			return toRoman(1) + toRoman(5);
 		}
 		return range(0, i).mapToObj(x -> ("I")).collect(joining());
 	}
