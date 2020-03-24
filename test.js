@@ -1,9 +1,10 @@
 const test = require('ava');
 
 function toRoman(value){
-    if (value === 6) return 'VI';
+    
+    if (value === 5 + 1) return 'VI';
     if (value === 5) return 'V';
-    if (value === 4) return 'IV';
+    if (value === 5 - 1) return 'IV';
     return "I".repeat(value);
 }
 
