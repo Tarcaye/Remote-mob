@@ -13,6 +13,10 @@ function toRoman(value){
     return "I".repeat(value);
 }
 
+function isPrevious(ofValue, value) {
+    return value === ofValue -1;
+}
+
 function minus(arabicNumber, arabicNumberToSubstract) {
     return toRoman(arabicNumberToSubstract) + toRoman(arabicNumber);
 }
