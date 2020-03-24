@@ -1,0 +1,19 @@
+{
+  "name": "remote-mob",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Tarcaye/Remote-mob.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Tarcaye/Remote-mob/issues"
+  },
+  "homepage": "https://github.com/Tarcaye/Remote-mob#readme"
+}
