@@ -1,11 +1,16 @@
 const test = require('ava');
 
 function toRoman(value){
+    var newValue = value - 5;
     
     if (value === 5 + 1) return toRoman(5) + toRoman(1);
     if (value === 5) return 'V';
-    if (value === 5 - 1) return 'IV';
+    if (value === 5 - 1) return minus(5, 1);
     return "I".repeat(value);
+}
+
+function minus(arabicNumber, arabicNumberToSubstract) {
+    return toRoman(arabicNumberToSubstract) + toRoman(arabicNumber);
 }
 
 test('should convert 1 to I', t => {
@@ -31,3 +36,4 @@ test('should convert 5 to V', t => {
 test('should convert 6 to VI', t => {
     t.is(toRoman(6), 'VI');
 });
+
