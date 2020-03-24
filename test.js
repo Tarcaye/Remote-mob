@@ -4,6 +4,7 @@ function toRoman(value){
     var newValue = value - 5;
 
     if (value === 10) return 'X';
+    if (value === 10 - 1) return minus(10, 1);
 
     if (value === 5 + 1) return toRoman(5) + toRoman(1);
     if (value === 5) return 'V';
@@ -40,9 +41,10 @@ test('should convert 6 to VI', t => {
     t.is(toRoman(6), 'VI');
 });
 
-
-
 test('should convert 10 to X', t => {
     t.is(toRoman(10), 'X');
 });
 
+test('should convert 9 to IX', t => {
+    t.is(toRoman(9), 'IX');
+});
