@@ -1,9 +1,7 @@
 const test = require('ava');
 
 function toRoman(value){
-    if (value === 3) return "III";
-    if (value === 2) return "II";
-    return "I";
+    return "I".repeat(value);
 }
 
 test('should convert 1 to I', t => {
