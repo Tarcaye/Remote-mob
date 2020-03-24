@@ -15,5 +15,8 @@
   "bugs": {
     "url": "https://github.com/Tarcaye/Remote-mob/issues"
   },
-  "homepage": "https://github.com/Tarcaye/Remote-mob#readme"
+  "homepage": "https://github.com/Tarcaye/Remote-mob#readme",
+  "dependencies": {
+    "ava": "^3.5.1"
+  }
 }
