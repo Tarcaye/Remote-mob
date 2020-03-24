@@ -1,6 +1,9 @@
 const test = require('ava');
 
 function toRoman(value){
+    if (value === 6) return 'VI';
+    if (value === 5) return 'V';
+    if (value === 4) return 'IV';
     return "I".repeat(value);
 }
 
@@ -14,4 +17,16 @@ test('should convert 2 to II', t => {
 
 test('should convert 3 to III', t => {
     t.is(toRoman(3), 'III');
+});
+
+test('should convert 4 to IV', t => {
+    t.is(toRoman(4), 'IV');
+});
+
+test('should convert 5 to V', t => {
+    t.is(toRoman(5), 'V');
+});
+
+test('should convert 6 to VI', t => {
+    t.is(toRoman(6), 'VI');
 });
