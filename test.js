@@ -1,5 +1,9 @@
 const test = require('ava');
 
-test('should', async t => {
-    t.is('1', 'I');
+function toRoman(value){
+    return "I";
+}
+
+test('should', t => {
+    t.is(toRoman(1), 'I');
 });
