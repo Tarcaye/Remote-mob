@@ -17,33 +17,11 @@
 
 ### Salles:
 1. https://meet.jit.si/remote-mob-programming-fr-1
-	* Lúdøvįč
-	* Dan
-	* Michal Urban
-	* Nicolas Kosinski
-	* la_urre ?
-
 2. https://meet.jit.si/remote-mob-programming-fr-2
-	* Guillaume ?
-	* Jérôme Prudent
-	* Mathieu Pouëdras
-	* C. Vaufray
-
 3. https://meet.jit.si/remote-mob-programming-fr-3
-	* Thomas P
-	* Sekou
-	* Lebriq Zakariae
-	* Youssef Nait
-
 4. https://meet.jit.si/remote-mob-programming-fr-4
-	* Matthieu P
-	* Elkhemiri
-	* Ali BEN HADJ HAMMOUDA
-	* Freddy Chiron
-
 5. Any questions ? https://meet.jit.si/remote-mob-programming-fr-main
 
- 
 ### 20h30
 - Katas sur les groupes 
 
