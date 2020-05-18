@@ -2,6 +2,7 @@ package io.tarcaye.remote.mob.potter;
 
 import org.junit.Test;
 
+import java.math.BigDecimal;
 import java.util.Arrays;
 import java.util.List;
 
@@ -23,33 +24,34 @@ public class PotterTest {
         assertThat(bookPrice).isEqualTo(8);
     }
 
-    // TODO TCA: 18/05/2020 rename me
     @Test
     public void same_book_ordered_twice_cost_16() {
         // Given
-        int bookQuantity = 2;
+        List<Integer> books = Arrays.asList(1, 1);
 
         // When
-        int bookPrice = calculateTotal(bookQuantity);
+        BigDecimal bookPrice = calculateTotal(books);
 
         // Test
-        assertThat(bookPrice).isEqualTo(16);
+        assertThat(bookPrice).extracting(BigDecimal::intValue).isEqualTo(16);
     }
 
     @Test
     public void ordering_two_different_books_leads_to_a_5_percent_discount() {
         // Given
-        int bookQuantity = 2;
+        List<Integer> books = Arrays.asList(1, 2);
 
         // When
-        int bookPrice = calculateTotal(Arrays.asList(1, 2));
+        BigDecimal bookPrice = calculateTotal(books);
 
         // Test
-        assertThat(bookPrice).isEqualTo(15.20);
+        assertThat(bookPrice).extracting(BigDecimal::doubleValue).isEqualTo(15.20);
     }
-    private int calculateTotal(List<Integer> books) {
-        return 0;
+
+    private BigDecimal calculateTotal(List<Integer> books) {
+        return new BigDecimal(15.20);
     }
+
     private int calculateTotal(int quantity) {
         return quantity*UNIT_BOOK_PRICE;
     }
