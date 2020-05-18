@@ -22,7 +22,7 @@ public class PotterTest {
 
     // TODO TCA: 18/05/2020 rename me
     @Test
-    public void toto() {
+    public void same_book_ordered_twice_cost_16() {
         // Given
         int bookQuantity = 2;
 
@@ -31,6 +31,18 @@ public class PotterTest {
 
         // Test
         assertThat(bookPrice).isEqualTo(16);
+    }
+
+    @Test
+    public void ordering_two_different_books_leads_to_a_5_percent_discount() {
+        // Given
+        int bookQuantity = 2;
+
+        // When
+        int bookPrice = calculateTotal(bookQuantity);
+
+        // Test
+        assertThat(bookPrice).isEqualTo(16 - 16 * 0.05);
     }
 
     private int calculateTotal(int i) {
