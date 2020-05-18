@@ -2,6 +2,9 @@ package io.tarcaye.remote.mob.potter;
 
 import org.junit.Test;
 
+import java.util.Arrays;
+import java.util.List;
+
 import static org.assertj.core.api.Assertions.assertThat;
 
 public class PotterTest {
@@ -39,14 +42,16 @@ public class PotterTest {
         int bookQuantity = 2;
 
         // When
-        int bookPrice = calculateTotal(bookQuantity);
+        int bookPrice = calculateTotal(Arrays.asList(1, 2));
 
         // Test
-        assertThat(bookPrice).isEqualTo(16 - 16 * 0.05);
+        assertThat(bookPrice).isEqualTo(15.20);
     }
-
-    private int calculateTotal(int i) {
-        return i*UNIT_BOOK_PRICE;
+    private int calculateTotal(List<Integer> books) {
+        return 0;
+    }
+    private int calculateTotal(int quantity) {
+        return quantity*UNIT_BOOK_PRICE;
     }
 
 }
