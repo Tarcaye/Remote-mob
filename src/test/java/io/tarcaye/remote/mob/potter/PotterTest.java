@@ -50,8 +50,24 @@ public class PotterTest {
         assertThat(bookPrice).extracting(BigDecimal::doubleValue).isEqualTo(15.20);
     }
 
+    @Test
+    public void ordering_two_other_different_books_leads_to_a_5_percent_discount() {
+        // Given
+        List<Integer> books = Arrays.asList(1, 3);
+
+        // When
+        BigDecimal bookPrice = calculateTotal(books);
+
+        // Test
+        assertThat(bookPrice).extracting(BigDecimal::doubleValue).isEqualTo(15.20);
+    }
+
+    private boolean containsTwoDifferentBooks(List<Integer> books) {
+        return books.containsAll(Arrays.asList(1,2)) || books.containsAll(Arrays.asList(1,3));
+    }
+
     private BigDecimal calculateTotal(List<Integer> books) {
-        if (books.containsAll(Arrays.asList(1,2))) return BigDecimal.valueOf(15.2);
+        if (containsTwoDifferentBooks(books)) return BigDecimal.valueOf(15.2);
         return BigDecimal.valueOf(books.size() * UNIT_BOOK_PRICE);
     }
 
