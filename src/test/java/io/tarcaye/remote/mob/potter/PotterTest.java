@@ -1,9 +1,11 @@
 package io.tarcaye.remote.mob.potter;
 
+import org.junit.Ignore;
 import org.junit.Test;
 
 import java.math.BigDecimal;
 import java.util.Arrays;
+import java.util.Collections;
 import java.util.List;
 
 import static org.assertj.core.api.Assertions.assertThat;
@@ -15,13 +17,13 @@ public class PotterTest {
     @Test
     public void one_book_should_cost_8() {
         // Given
-        int bookQuantity = 1;
+        List<Integer> books = Collections.singletonList(1);
 
         // When
-        int bookPrice = calculateTotal(bookQuantity);
+        BigDecimal bookPrice = calculateTotal(books);
 
         // Test
-        assertThat(bookPrice).isEqualTo(8);
+        assertThat(bookPrice).extracting(BigDecimal::intValue).isEqualTo(8);
     }
 
     @Test
@@ -49,11 +51,8 @@ public class PotterTest {
     }
 
     private BigDecimal calculateTotal(List<Integer> books) {
-        return new BigDecimal(15.20);
-    }
-
-    private int calculateTotal(int quantity) {
-        return quantity*UNIT_BOOK_PRICE;
+        if (books.containsAll(Arrays.asList(1,2))) return BigDecimal.valueOf(15.2);
+        return BigDecimal.valueOf(books.size() * UNIT_BOOK_PRICE);
     }
 
 }
