@@ -18,7 +18,8 @@ public class PositiveNumber {
         return value;
     }
 
-    public boolean isAMultipleOf3() {
-        return value % 3 == 0;
+    public boolean isAMultipleOf(int number) {
+        return value % number == 0;
     }
+
 }

@@ -5,50 +5,61 @@ import org.junit.Test;
 
 public class FizzBuzzTest {
     @Test
-    public void should_fizz_for_a_multiple_of_3() {
-        Assertions.assertThat(fizzbuzz(PositiveNumber.of(3))).isEqualTo("Fizz");
+    public void fizz_for_a_multiple_of_3() {
+        Assertions.assertThat(fizzBuzz(PositiveNumber.of(3))).isEqualTo("Fizz");
     }
 
     @Test
-    public void should_buzz_for_a_multiple_of_5() {
-        Assertions.assertThat(fizzbuzz(PositiveNumber.of(5))).isEqualTo("Buzz");
+    public void fizz_for_another_multiple_of_3() {
+        Assertions.assertThat(fizzBuzz(PositiveNumber.of(33))).isEqualTo("Fizz");
     }
 
     @Test
-    public void should_fizzbuzz_for_a_multiple_of_3_and_5() {
-        Assertions.assertThat(fizzbuzz(PositiveNumber.of(15))).isEqualTo("FizzBuzz");
+    public void buzz_for_a_multiple_of_5() {
+        Assertions.assertThat(fizzBuzz(PositiveNumber.of(5))).isEqualTo("Buzz");
     }
 
     @Test
-    public void should_return_the_number_otherwise() {
-        Assertions.assertThat(fizzbuzz(PositiveNumber.of(4))).isEqualTo("4");
+    public void buzz_for_another_multiple_of_5() {
+        Assertions.assertThat(fizzBuzz(PositiveNumber.of(85))).isEqualTo("Buzz");
+    }
+
+    @Test
+    public void fizzbuzz_for_a_multiple_of_3_and_5() {
+        Assertions.assertThat(fizzBuzz(PositiveNumber.of(15))).isEqualTo("FizzBuzz");
+    }
+
+    @Test
+    public void fizzbuzz_for_another_multiple_of_3_and_5() {
+        Assertions.assertThat(fizzBuzz(PositiveNumber.of(75))).isEqualTo("FizzBuzz");
+    }
+
+    @Test
+    public void return_the_number_otherwise() {
+        Assertions.assertThat(fizzBuzz(PositiveNumber.of(4))).isEqualTo("4");
+    }
+    @Test
+    public void return_the_number_otherwise_2() {
+        Assertions.assertThat(fizzBuzz(PositiveNumber.of(8))).isEqualTo("8");
     }
 
     @Test
     public void fail_for_a_negative_number() {
-        Assertions.assertThatThrownBy(() -> fizzbuzz(PositiveNumber.of(-1)))
+        Assertions.assertThatThrownBy(() -> fizzBuzz(PositiveNumber.of(-1)))
                 .isInstanceOf(IllegalArgumentException.class);
     }
 
-    private String fizzbuzz(PositiveNumber number) {
+    private String fizzBuzz(PositiveNumber number) {
         String fizzBuzz = "";
-        if (number.isAMultipleOf3() && isAMultipleOf5(number.getValue())) {
-            fizzBuzz = "FizzBuzz";
-            return fizzBuzz;
+        if (number.isAMultipleOf(3)) {
+            fizzBuzz = "Fizz";
         }
-        if (number.isAMultipleOf3()) {
-            fizzBuzz += "Fizz";
+        if (number.isAMultipleOf(5)) {
+            fizzBuzz += "Buzz";
         }
-        if (isAMultipleOf5(number.getValue())) {
-            return "Buzz";
-        }
-        if (fizzBuzz.equals(""))
-            return number.getValue() + "";
+        if (fizzBuzz.isEmpty())
+            return String.valueOf(number.getValue());
         return fizzBuzz;
-    }
-
-    private boolean isAMultipleOf5(int i) {
-        return i % 5 == 0;
     }
 
 }
