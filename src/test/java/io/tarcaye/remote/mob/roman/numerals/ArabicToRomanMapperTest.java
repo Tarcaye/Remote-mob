@@ -1,6 +1,6 @@
 package io.tarcaye.remote.mob.roman.numerals;
 
-import org.junit.Test;
+import org.junit.jupiter.api.Test;
 
 import static java.util.stream.Collectors.joining;
 import static java.util.stream.IntStream.range;
