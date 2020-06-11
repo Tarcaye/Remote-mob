@@ -1,7 +1,7 @@
 package io.tarcaye.remote.mob.fizzbuzz;
 
 import org.assertj.core.api.Assertions;
-import org.junit.Test;
+import org.junit.jupiter.api.Test;
 
 public class FizzBuzzTest {
     @Test

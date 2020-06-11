@@ -1,7 +1,6 @@
 package io.tarcaye.remote.mob.potter;
 
-import org.junit.Ignore;
-import org.junit.Test;
+import org.junit.jupiter.api.Test;
 
 import java.math.BigDecimal;
 import java.util.Arrays;
