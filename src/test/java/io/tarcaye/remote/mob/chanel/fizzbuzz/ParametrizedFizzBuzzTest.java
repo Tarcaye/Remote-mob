@@ -1,5 +1,6 @@
-package io.tarcaye.remote.mob.fizzbuzz;
+package io.tarcaye.remote.mob.chanel.fizzbuzz;
 
+import io.tarcaye.remote.mob.chanel.fizzbuzz.FizzBuzzNumber;
 import org.assertj.core.api.Assertions;
 import org.junit.jupiter.params.ParameterizedTest;
 import org.junit.jupiter.params.provider.ValueSource;

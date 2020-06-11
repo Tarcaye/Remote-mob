@@ -1,4 +1,4 @@
-package io.tarcaye.remote.mob.fizzbuzz;
+package io.tarcaye.remote.mob.chanel.fizzbuzz;
 
 public class FizzBuzzNumber {
     private final int value;

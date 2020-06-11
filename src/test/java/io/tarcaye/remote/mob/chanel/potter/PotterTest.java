@@ -1,4 +1,4 @@
-package io.tarcaye.remote.mob.potter;
+package io.tarcaye.remote.mob.chanel.potter;
 
 import org.junit.jupiter.api.Test;
 
