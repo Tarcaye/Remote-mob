@@ -2,6 +2,7 @@ package io.tarcaye.remote.mob.shodo.trivia.runner.trivia.runner;
 
 import io.tarcaye.remote.mob.shodo.trivia.runner.trivia.ugly.Game;
 
+import java.util.LinkedList;
 import java.util.List;
 import java.util.Random;
 

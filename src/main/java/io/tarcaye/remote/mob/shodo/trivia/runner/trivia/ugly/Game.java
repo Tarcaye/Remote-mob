@@ -15,29 +15,38 @@ public class Game {
     
     boolean[] inPenaltyBox  = new boolean[MAX_PLAYERS];
     
-    List<String> popQuestions = new LinkedList<>();
+    List<String> popQuestions;
     
-    List<String> scienceQuestions = new LinkedList<>();
+    List<String> scienceQuestions;
     
-    List<String> sportsQuestions = new LinkedList<>();
+    List<String> sportsQuestions;
     
-    List<String> rockQuestions = new LinkedList<>();
+    List<String> rockQuestions;
     
     int currentPlayer = 0;
     
     boolean isGettingOutOfPenaltyBox;
     
-    private Game(){
-    	for (int i = 0; i < 50; i++) {
+    private Game(List<String> popQuestions, List<String> scienceQuestions, List<String> sportsQuestions, List<String> rockQuestions){
+		this.popQuestions = popQuestions;
+		this.scienceQuestions = scienceQuestions;
+		this.sportsQuestions = sportsQuestions;
+		this.rockQuestions = rockQuestions;
+	}
+    
+    public static Game createGame(List<String> players){
+		LinkedList<String> popQuestions = new LinkedList<>();
+		LinkedList<String> scienceQuestions = new LinkedList<>();
+		LinkedList<String> sportsQuestions = new LinkedList<>();
+		LinkedList<String> rockQuestions = new LinkedList<>();
+		for (int i = 0; i < 50; i++) {
 			popQuestions.add("Pop Question " + i);
 			scienceQuestions.add(("Science Question " + i));
 			sportsQuestions.add(("Sports Question " + i));
 			rockQuestions.add("Rock Question " + i);
-    	}
-    }
-    
-    public static Game createGame(List<String> players){
-        Game game = new Game();
+		}
+
+		Game game = new Game(popQuestions, scienceQuestions, sportsQuestions, rockQuestions);
         players.forEach(game::add);
         return game;
     }
