@@ -1,5 +1,7 @@
-package io.tarcaye.remote.mob.shodo.guilded.rose.rose;
+package io.tarcaye.remote.mob.shodo.guilded.rose;
 
+import io.tarcaye.remote.mob.shodo.guilded.rose.GildedRose;
+import io.tarcaye.remote.mob.shodo.guilded.rose.Item;
 import org.approvaltests.Approvals;
 import org.junit.jupiter.api.Test;
 

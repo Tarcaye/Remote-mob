@@ -1,4 +1,6 @@
-package io.tarcaye.remote.mob.shodo.guilded.rose.rose;
+package io.tarcaye.remote.mob.shodo.guilded.rose;
+
+import io.tarcaye.remote.mob.shodo.guilded.rose.GildedRose;
 
 public class Item {
 

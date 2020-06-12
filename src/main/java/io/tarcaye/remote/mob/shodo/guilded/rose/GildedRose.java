@@ -1,4 +1,4 @@
-package io.tarcaye.remote.mob.shodo.guilded.rose.rose;
+package io.tarcaye.remote.mob.shodo.guilded.rose;
 
 public class GildedRose {
     public static final String BACKSTAGE_PASSES = "Backstage passes to a TAFKAL80ETC concert";
