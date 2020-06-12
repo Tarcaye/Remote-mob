@@ -27,7 +27,7 @@ public class Game {
     
     boolean isGettingOutOfPenaltyBox;
     
-    public  Game(){
+    private Game(){
     	for (int i = 0; i < 50; i++) {
 			popQuestions.add("Pop Question " + i);
 			scienceQuestions.add(("Science Question " + i));
@@ -37,9 +37,7 @@ public class Game {
     }
     
     public static Game createGame(List<String> players){
-        
         Game game = new Game();
-        
         players.forEach(game::add);
         return game;
     }
