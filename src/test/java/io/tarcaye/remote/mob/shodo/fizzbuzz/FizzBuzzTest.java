@@ -35,7 +35,16 @@ public class FizzBuzzTest {
         Assertions.assertThat(fizzBuzz(multipleOf3And5)).isEqualTo("FizzBuzz");
     }
 
+    @ParameterizedTest
+    @ValueSource(ints = {13, 23, 43})
+    public void shouldReturnFizzForNumberContaining3(final int numberContaining3) {
+        Assertions.assertThat(fizzBuzz(numberContaining3)).isEqualTo("Fizz");
+    }
+
     private String fizzBuzz(final int number) {
+        if (String.valueOf(number).contains("3")) {
+            return "Fizz";
+        }
         if (isAMultipleOf5(number) && isAMultipleOf3(number)) {
             return "FizzBuzz";
         }
