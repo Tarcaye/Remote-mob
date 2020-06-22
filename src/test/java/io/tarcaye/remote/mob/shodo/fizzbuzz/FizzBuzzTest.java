@@ -10,8 +10,13 @@ public class FizzBuzzTest {
         Assertions.assertThat(converts(1)).isEqualTo("1");
     }
 
+    @Test
+    public void shouldConvert2to2() {
+        Assertions.assertThat(converts(2)).isEqualTo("2");
+    }
+
     private String converts(final int i) {
-        return null;
+        return String.valueOf(i);
     }
 
 
