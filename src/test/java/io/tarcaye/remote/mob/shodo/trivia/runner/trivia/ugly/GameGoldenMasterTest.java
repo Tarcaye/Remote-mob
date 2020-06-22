@@ -1,13 +1,12 @@
 package io.tarcaye.remote.mob.shodo.trivia.runner.trivia.ugly;
 
-import java.io.ByteArrayOutputStream;
-import java.io.PrintStream;
-import java.util.LinkedList;
-import java.util.List;
-import java.util.Random;
-
 import org.approvaltests.Approvals;
 import org.junit.jupiter.api.Test;
+
+import java.io.ByteArrayOutputStream;
+import java.io.PrintStream;
+import java.util.List;
+import java.util.Random;
 
 public class GameGoldenMasterTest {
 
@@ -23,8 +22,13 @@ public class GameGoldenMasterTest {
         Random rand = new Random(1L);
         
         for (int i = 0; i < 1000; i++) {
-        
-            Game aGame = Game.createGame(List.of("Chet", "Pat", "Sue"));
+
+
+            Players players = Players.createPlayers(List.of(
+                    "Chet",
+                    "Pat",
+                    "Sue"));
+            Game aGame = Game.createGame(players);
         
             do {
                 
@@ -40,5 +44,6 @@ public class GameGoldenMasterTest {
         }
         Approvals.verify(byteArrayOutputStream.toString());
     }
+
 
 }

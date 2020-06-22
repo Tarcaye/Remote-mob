@@ -1,8 +1,8 @@
 package io.tarcaye.remote.mob.shodo.trivia.runner.trivia.runner;
 
 import io.tarcaye.remote.mob.shodo.trivia.runner.trivia.ugly.Game;
+import io.tarcaye.remote.mob.shodo.trivia.runner.trivia.ugly.Players;
 
-import java.util.LinkedList;
 import java.util.List;
 import java.util.Random;
 
@@ -11,7 +11,11 @@ public class GameRunner {
     private static boolean notAWinner;
 
     public static void main(String[] args) {
-        Game aGame = Game.createGame(List.of("Chet", "Pat", "Sue"));
+        Players players = Players.createPlayers(List.of(
+                "Chet",
+                "Pat",
+                "Sue"));
+        Game aGame = Game.createGame(players);
         Random rand = new Random();
 
         do {
