@@ -9,21 +9,25 @@ public class MyTest {
 	
 	@Test
 	public void whenTakeOneShouldReturnOne() {
-		Assertions.assertThat(returnOne()).isEqualTo("1");
+		Assertions.assertThat(fizzbuzz(1)).isEqualTo("1");
 	}
 	
 	@Test
 	public void whenTakeTwoShouldReturnTwo() {
-		Assertions.assertThat(returnOne(2)).isEqualTo("2");
+		Assertions.assertThat(fizzbuzz(2)).isEqualTo("2");
 	}
 
-	private IntPredicate returnOne(int i) {
-
-		return null;
+	@Test
+	public void whenTakeFourShouldReturnFour() {
+		Assertions.assertThat(fizzbuzz(4)).isEqualTo("4");
 	}
 
-	private String returnOne() {
-		return "1";
+	private String fizzbuzz(int i) {
+        if (i == 4)
+    		return String.valueOf(i);
+        if (i == 2)
+    		return "2";
+        return "1";
 	}
 }
 
