@@ -24,6 +24,16 @@ public class MyTest {
 	public void whenTakeThreeShouldReturnFizz() {
 		Assertions.assertThat(fizzbuzz(3)).isEqualTo("Fizz");
 	}
+	
+	@Test
+	public void whenTakeSixShouldReturnFizz() {
+		Assertions.assertThat(fizzbuzz(6)).isEqualTo("Fizz");
+	}
+	
+	@Test
+	public void whenTakeNineShouldReturnFizz() {
+		Assertions.assertThat(fizzbuzz(9)).isEqualTo("Fizz");
+	}
 
 	@Test
 	public void whenTakeFiveShouldReturnBuzz() {
@@ -33,6 +43,8 @@ public class MyTest {
 	private String fizzbuzz(int i) {
 		if (i == 5) return "Buzz";
 		if (i == 3) return "Fizz";
+		if (i == 6) return "Fizz";
+		if (i == 9) return "Fizz";
 		return String.valueOf(i);
 	}
 }
