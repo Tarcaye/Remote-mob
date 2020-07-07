@@ -49,15 +49,17 @@ public class MyTest {
 	public void whenTakeTwentyShouldReturnBuzz() {
 		Assertions.assertThat(fizzbuzz(20)).isEqualTo("Buzz");
 	}
-
-	private String fizzbuzz(int i) {
-		if (i == 10 || i == 5 || i == 20) return "Buzz";
-		if (isMultipleOf3(i)) return "Fizz";
-		return String.valueOf(i);
+	
+	@Test
+	public void whenTakeFifteenShouldReturnFizzBuzz() {
+		Assertions.assertThat(fizzbuzz(15)).isEqualTo("FizzBuzz");
 	}
 
-    private boolean isMultipleOf3(int i) {
-        return i % 3 == 0;
-    }
+	private String fizzbuzz(int i) {
+		if (i % 3 == 0 && i % 5 == 0) return "FizzBuzz";
+		if (i % 5 == 0) return "Buzz";
+		if (i % 3 == 0) return "Fizz";
+		return String.valueOf(i);
+	}
 }
 
