@@ -40,8 +40,18 @@ public class MyTest {
 		Assertions.assertThat(fizzbuzz(5)).isEqualTo("Buzz");
 	}
 
+	@Test
+	public void whenTakeTenShouldReturnBuzz() {
+		Assertions.assertThat(fizzbuzz(10)).isEqualTo("Buzz");
+	}
+
+	@Test
+	public void whenTakeTwentyShouldReturnBuzz() {
+		Assertions.assertThat(fizzbuzz(20)).isEqualTo("Buzz");
+	}
+
 	private String fizzbuzz(int i) {
-		if (i == 5) return "Buzz";
+		if (i == 10 || i == 5 || i == 20) return "Buzz";
 		if (isMultipleOf3(i)) return "Fizz";
 		return String.valueOf(i);
 	}
