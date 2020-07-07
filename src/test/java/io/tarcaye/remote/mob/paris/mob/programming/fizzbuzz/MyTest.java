@@ -49,18 +49,17 @@ public class MyTest {
 	public void whenTakeTwentyShouldReturnBuzz() {
 		Assertions.assertThat(fizzbuzz(20)).isEqualTo("Buzz");
 	}
-	
+
 	@Test
 	public void whenTakeFifteenShouldReturnFizzBuzz() {
 		Assertions.assertThat(fizzbuzz(15)).isEqualTo("FizzBuzz");
 	}
 
 	private String fizzbuzz(int i) {
-        var result = String.valueOf(i);
-		if (i % 3 == 0 && i % 5 == 0) result = "FizzBuzz";
-        else if (i % 5 == 0) result = "Buzz";
-        else if (i % 3 == 0) result = "Fizz";
-		return result;
+		if (i % 3 == 0 && i % 5 == 0) return "FizzBuzz";
+		if (i % 5 == 0) return "Buzz";
+		if (i % 3 == 0) return "Fizz";
+		return String.valueOf(i);
 	}
 }
 
