@@ -1,7 +1,5 @@
 package io.tarcaye.remote.mob.paris.mob.programming.fizzbuzz;
 
-import java.util.function.IntPredicate;
-
 import org.assertj.core.api.Assertions;
 import org.junit.jupiter.api.Test;
 
@@ -23,11 +21,7 @@ public class MyTest {
 	}
 
 	private String fizzbuzz(int i) {
-        if (i == 4)
-    		return String.valueOf(i);
-        if (i == 2)
-    		return "2";
-        return "1";
+		return String.valueOf(i);
 	}
 }
 
