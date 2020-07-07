@@ -6,7 +6,11 @@ import org.junit.jupiter.api.Test;
 public class MyTest {
 	
 	@Test
-	public void whenTakeOneReturnOne() {
-		Assertions.assertThat("1").isEqualTo("1");
+	public void whenTakeOneShouldReturnOne() {
+		Assertions.assertThat(returnOne()).isEqualTo("1");
+	}
+
+	private String returnOne() {
+		return "1";
 	}
 }
