@@ -56,10 +56,22 @@ public class MyTest {
 	}
 
 	private String fizzbuzz(int i) {
-		if (i % 3 == 0 && i % 5 == 0) return "FizzBuzz";
-		if (i % 5 == 0) return "Buzz";
-		if (i % 3 == 0) return "Fizz";
+		if (isFizzBuzz(i)) return "FizzBuzz";
+		if (isBuzz(i)) return "Buzz";
+		if (isFizz(i)) return "Fizz";
 		return String.valueOf(i);
+	}
+
+	private boolean isFizzBuzz(int i) {
+		return isFizz(i) && isBuzz(i);
+	}
+
+	private boolean isBuzz(int i) {
+		return i % 5 == 0;
+	}
+
+	private boolean isFizz(int i) {
+		return i % 3 == 0;
 	}
 }
 
