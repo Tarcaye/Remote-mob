@@ -42,10 +42,12 @@ public class MyTest {
 
 	private String fizzbuzz(int i) {
 		if (i == 5) return "Buzz";
-		if (i == 3) return "Fizz";
-		if (i == 6) return "Fizz";
-		if (i == 9) return "Fizz";
+		if (isMultipleOf3(i)) return "Fizz";
 		return String.valueOf(i);
 	}
+
+    private boolean isMultipleOf3(int i) {
+        return i % 3 == 0;
+    }
 }
 
