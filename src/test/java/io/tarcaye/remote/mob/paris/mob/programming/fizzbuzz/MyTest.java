@@ -25,7 +25,13 @@ public class MyTest {
 		Assertions.assertThat(fizzbuzz(3)).isEqualTo("Fizz");
 	}
 
+	@Test
+	public void whenTakeFiveShouldReturnBuzz() {
+		Assertions.assertThat(fizzbuzz(5)).isEqualTo("Buzz");
+	}
+
 	private String fizzbuzz(int i) {
+		if (i == 5) return "Buzz";
 		if (i == 3) return "Fizz";
 		return String.valueOf(i);
 	}
