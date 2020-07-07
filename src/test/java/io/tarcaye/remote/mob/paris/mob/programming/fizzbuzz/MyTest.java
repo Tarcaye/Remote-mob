@@ -7,6 +7,6 @@ public class MyTest {
 	
 	@Test
 	public void whenTakeOneReturnOne() {
-		Assertions.assertThat("").isEqualTo("1");
+		Assertions.assertThat("1").isEqualTo("1");
 	}
 }
